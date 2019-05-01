@@ -1,13 +1,15 @@
+import { HallsComponent } from './../../halls/halls.component';
+import { SubjectsComponent } from '../../subjects/subjects.component';
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
-import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
+import { LecturersComponent } from '../../addlecturers/lecturers.component';
+import { WorkloadComponent } from 'app/workload/workload.component';
+import { StudentCountComponent } from 'app/student-count/student-count.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -53,11 +55,12 @@ export const AdminLayoutRoutes: Routes = [
     //     }]
     // }
     { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
+    { path: 'halls',          component: HallsComponent },
     { path: 'table-list',     component: TableListComponent },
-    { path: 'typography',     component: TypographyComponent },
+    { path: 'student-count',     component: StudentCountComponent },
     { path: 'icons',          component: IconsComponent },
-    { path: 'maps',           component: MapsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
+    { path: 'subjects',       component: SubjectsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'managelectures',  component: LecturersComponent },
+    { path: 'workload',  component: WorkloadComponent },
 ];
