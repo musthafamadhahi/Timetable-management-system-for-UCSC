@@ -49,6 +49,9 @@ import { LecnavbarComponent } from './lecComponents/lecnavbar/lecnavbar.componen
 import { SuperadminLayoutComponent } from './superadmin-layout/superadmin-layout.component';
 import { NoticesComponent } from './notices/notices.component';
 import { ChatComponent } from './chat/chat.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { CoreModule } from './core/core.module';
+import { LecturerWorkloadComponent } from './lecturer-workload/lecturer-workload.component';
 
 
 
@@ -86,7 +89,7 @@ let config = {
     }),
     NgxPaginationModule ,
     SharedModule,
-    
+    CoreModule
   ],
   declarations: [
     AppComponent,
@@ -95,6 +98,8 @@ let config = {
     EditLecturerComponent,
     SuperadminLayoutComponent,
     LecturerLayoutComponent,
+    HomepageComponent,
+    
     
 
     
