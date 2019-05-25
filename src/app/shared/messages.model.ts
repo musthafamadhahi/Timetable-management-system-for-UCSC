@@ -1,0 +1,13 @@
+export interface Messages {
+    id: string;
+    LecturerID: string;
+    Date: string;
+    Time: string;
+    NewDate:string;
+    NewTime:string;
+    Subject: string;
+    Reason: string;
+    Message:string;
+   // subjects: Array[] ;
+ }
+

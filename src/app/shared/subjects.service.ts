@@ -22,40 +22,15 @@ export class SubjectsService {
     year: new FormControl('', [Validators.required, Validators.min(1), Validators.max(4), Validators.pattern('^[1-4]*$')]),
     semester: new FormControl('', [Validators.required, Validators.min(1), Validators.max(2), Validators.pattern('^[1-2]*$')]),
     credit: new FormControl('', [Validators.required, Validators.min(1), Validators.max(3), Validators.pattern('^[1-3]*$')]),
+    assignedLecturer1: new FormControl('', Validators.required),
+    assignedLecturer2: new FormControl('', Validators.required),
+
   });
 
   getSubjects(){
     return this.firestore.collection('subjects').snapshotChanges();
   }
 
-  
 
-  // insertSubject(subjects) {
-  //   this.subjectsList.push({
-  //     subjectCode: subjects.subjectCode,
-  //     subjectTitle: subjects.subjectTitle,
-  //     year: subjects.year,
-  //     semester: subjects.semester,
-  //     credit: subjects.credit
-  //   });
-  // }
-
-  // populateForm(subject){
-  //   this.form.setValue(subject);
-  // }
-
-  // updateSubject(subjects) {
-  //   this.subjectsList.update(subjects.$key,{
-  //     subjectCode: subjects.subjectCode,
-  //     subjectTitle: subjects.subjectTitle,
-  //     year: subjects.year,
-  //     semester: subjects.semester,
-  //     credit: subjects.credit
-  //   });
-  // }
-
-  // deleteSubject($key: string){
-  //   this.subjectsList.remove($key);
-  // }
 
 }
