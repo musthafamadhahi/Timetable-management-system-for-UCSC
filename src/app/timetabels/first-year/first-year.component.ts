@@ -130,14 +130,16 @@ export class FirstYearComponent implements OnInit {
   constructor(private ttcs:TimeTableCRUDService, private scs: SubjectsService, private lcs: LecturerService, private hcs: HallService ) { }
 
   onDataBound1Y(event){
+    // this.ttcs.checkReservedSlots(0, 1618581800, "g515", "thusitha32").subscribe((hall)=> {
+    //   console.log(hall);
+    // });
         this.ttcs.setFirstYearTT(this.eventSettings1Y.dataSource)
       }
 
     
   
 
-  ngOnInit() {
-
+  async ngOnInit() {
     this.ttcs.getFirstYearTT().subscribe(next=>{
 
       for (let i of next.data().firstyear as any[]){
