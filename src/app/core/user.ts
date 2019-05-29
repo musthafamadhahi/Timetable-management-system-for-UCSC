@@ -1,12 +1,11 @@
 export interface Roles{
     lecturer?: boolean;
     admin?: boolean;
-    superAdmin?: boolean;
+    superadmin?: boolean;
 }
 
 export interface User{
     uid: string;
-    emai: string;
-    password: string;
+    email: string;
     roles: Roles;
 }

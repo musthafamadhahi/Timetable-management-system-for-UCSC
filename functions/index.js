@@ -48,3 +48,47 @@ exports.sendMail = functions.firestore.document('messages/{document}').onCreate(
         }
     })
 })
+
+
+
+exports.addAdminRole = functions.https.onCall((data, context) => {
+    return admin.auth().getUserByEmail(data.email).then(user => {
+        return admin.auth().setCustomUserClaims(user.id, {
+            admin: true
+        });
+    }).then(() => {
+        return{
+            message: '${data.email} has been made an admin Successfully!'
+        }
+    }).catch(err => {
+        return err;
+    });
+});
+
+exports.addSuperAdminRole = functions.https.onCall((data, context) => {
+    return admin.auth().getUserByEmail(data.email).then(user => {
+        return admin.auth().setCustomUserClaims(user.id, {
+            superadmin: true
+        });
+    }).then(() => {
+        return{
+            message: '${data.email} has been made as Super Admin Successfully!'
+        }
+    }).catch(err => {
+        return err;
+    });
+});
+
+exports.addLecturerRole = functions.https.onCall((data, context) => {
+    return admin.auth().getUserByEmail(data.email).then(user => {
+        return admin.auth().setCustomUserClaims(user.id, {
+            lecturer: true
+        });
+    }).then(() => {
+        return{
+            message: '${data.email} has been made as Lecturer Successfully!'
+        }
+    }).catch(err => {
+        return err;
+    });
+});
