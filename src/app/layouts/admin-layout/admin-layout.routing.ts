@@ -9,7 +9,7 @@ import { WorkloadComponent } from 'app/workload/workload.component';
 import { StudentCountComponent } from 'app/student-count/student-count.component';
 
 export const AdminLayoutRoutes: Routes = [
-    
+
     { path: 'dashboard',         component: DashboardComponent },
     { path: 'halls',             component: HallsComponent },
     { path: 'table-list',        component: TableListComponent },
